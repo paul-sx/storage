@@ -1,0 +1,13 @@
+{% extends 'things/base.html' %}
+
+{% block title_text %}Locations{% endblock %}
+{% block title_content %}Locations{% endblock %}
+{% block content %}
+<div class="flex flex-wrap justify-center mx-2 bg-gray-100">
+{% for location in locations %}
+    <form action="{% url 'location' location.pk %}"><button class="w-60 h-20 my-5 mr-5 bg-gray-300 rounded-lg hover:bg-gray-600 hover:text-gray-100">{{ location }}</button></form>
+{% endfor %}
+</div>
+
+
+{% endblock %}
