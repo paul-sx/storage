@@ -49,3 +49,15 @@ class ContainerCreateView(CreateView):
         return {
             'location': location
         }
+
+
+class ThingDetailView(DetailView):
+    model = Thing
+    template_name = 'things/thing_detail.html'
+    context_object_name = 'thing'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['container'] = get_object_or_404(Container, pk=self.kwargs.get('container_pk'))
+        context['location'] = get_object_or_404(Location, pk=self.kwargs.get('location_pk'))
+        return context

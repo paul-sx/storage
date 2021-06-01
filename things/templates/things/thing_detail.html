@@ -1,0 +1,10 @@
+{% extends 'things/base.html' %}
+
+{% block title_text %}{{container}}{% endblock %}
+{% block title_content %}<a href="/">🏠</a> > <a href="{% url 'location' location.pk %}">{{location}}</a> > <a href="{% url 'container' container.pk %}">{{container}}</a> > {{ thing }}{% endblock %}
+{% block content %}
+<div class="flex flex-wrap justify-center mx-2 bg-gray-100">
+
+</div>
+
+{% endblock %}
