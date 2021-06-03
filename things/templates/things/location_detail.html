@@ -2,6 +2,8 @@
 
 {% block title_text %}{{location}}{% endblock %}
 {% block title_content %}<a href="/">🏠</a> > {{location}}{% endblock %}
+{% block new_link %}{% url 'container_create' location.pk %}{% endblock %}
+{% block edit_link %}{% url 'location_edit' location.pk %}{% endblock %}
 {% block content %}
 <div class="flex flex-wrap justify-center mx-2 bg-gray-100">
 {% for container in containers %}

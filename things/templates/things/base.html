@@ -10,13 +10,13 @@
 <body>
 <div class="flex h-16 mt-2 mx-2 bg-gray-500 rounded-t-lg">
     <div class="w-16 rounded-tl-lg">
-        <a href="/"><p class="text-center w-16 h-16 pt-5 rounded-tl-lg bg-gray-300">➕</p></a>
+        <a href="{% block new_link %}/{% endblock %}"><p class="text-center w-16 h-16 pt-5 rounded-tl-lg bg-gray-300">➕</p></a>
     </div>
     <div class="flex-grow">
         <h1 class="text-4xl pt-2 pl-2">{% block title_content %}Location{% endblock %}</h1>
     </div>
     <div class="w-16 bg-gray-300 rounded-tr-lg">
-        <a href=""><p class="text-center text-4xl w-16 h-16 pt-3 rounded-tr-lg">📝</p></a>
+        <a href="{% block edit_link %}{% endblock %}"><p class="text-center text-4xl w-16 h-16 pt-3 rounded-tr-lg">📝</p></a>
     </div>
 </div>
 {% block content %}{% endblock %}

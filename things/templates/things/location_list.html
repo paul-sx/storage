@@ -2,6 +2,7 @@
 
 {% block title_text %}Locations{% endblock %}
 {% block title_content %}Locations{% endblock %}
+{% block new_link %}{% url 'location_create' %}{% endblock %}
 {% block content %}
 <div class="flex flex-wrap justify-center mx-2 bg-gray-100">
 {% for location in locations %}
