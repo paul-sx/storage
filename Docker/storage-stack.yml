@@ -5,7 +5,7 @@ services:
     volumes:
       - /blah/blah/blah:/usr/src/app/project
     environment:
-      - DJANGO_SITENAME=store.withthe.fish
+      - DJANGO_SITENAME=storage
       - DJANGO_SECRET_KEY=blah
     networks:
       - mainline
