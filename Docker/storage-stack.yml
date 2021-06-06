@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  storage:
+    image: pc0:5000/storage
+    volumes:
+      - /blah/blah/blah:/usr/src/app/project
+    environment:
+      - DJANGO_SITENAME=store.withthe.fish
+      - DJANGO_SECRET_KEY=blah
+    networks:
+      - mainline
+    deploy:
+      placement:
+        constraints:
+          - node.labels.nucbox == yes
