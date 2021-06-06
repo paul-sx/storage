@@ -3,7 +3,7 @@
 cd project
 
 if [ ! -f manage.py ]; then
-    git clone https://git.withthe.fish/paul/storage.git .
+    git clone https://github.com/paul-sx/storage.git .
     python manage.py migrate
     python manage.py makestatic
 else
