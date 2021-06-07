@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 if 'DJANGO_DEBUG_FALSE' in os.environ:
     DEBUG = False
     SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
-    ALLOWED_HOSTS = os.environ['DJANGO_SITENAME']
+    ALLOWED_HOSTS = [ os.environ['DJANGO_SITENAME'] ]
 else:
     # SECURITY WARNING: keep the secret key used in production secret!
     SECRET_KEY = 'django-insecure-zk3$#h0-%o(k*jlbygh6b(@90c(mb96jpbqvjd1kj%=c^d4mg6'
