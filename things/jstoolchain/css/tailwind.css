@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+label {
+	@apply block py-2 text-xl;
+}
+
+form p {
+	@apply mb-4;
+}
