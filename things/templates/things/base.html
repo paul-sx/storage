@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static "css/tailwind-output.css" %}">
     <title>{% block title_text %}Title is empty{% endblock %}</title>
+    <script>
+        function menuToggle() {                
+            var navMenu = document.getElementsByTagName("nav")[0];
+            navMenu.classList.toggle("hidden");
+            return false;
+        }
+    </script>
 </head>
 <body>
 <div class="flex h-16 mt-2 mx-2 bg-gray-500 rounded-t-lg">
@@ -16,9 +23,14 @@
         <h1 class="text-4xl pt-2 pl-2">{% block title_content %}Location{% endblock %}</h1>
     </div>
     <div class="w-16 bg-gray-300 rounded-tr-lg">
-        <a href="{% block edit_link %}{% endblock %}"><p class="text-center text-4xl w-16 h-16 pt-3 rounded-tr-lg">📝</p></a>
+        <a href="#" onClick=menuToggle()><p class="text-center text-4xl w-16 h-16 pt-3 rounded-tr-lg">🍔</p></a>
     </div>
 </div>
+<nav class="hidden flex flex-col mx-2">
+    <a class="text-4xl hover:bg-gray-200 text-center pt-3 bg-gray-100 h-16 w-full" href="{% block edit_link %}{% endblock %}">📝 - Edit</a>
+    <a class="text-4xl hover:bg-gray-200 text-center pt-3 bg-gray-100 h-16 w-full" href="/">🔍 - Search</a>
+    <a class="text-4xl hover:bg-gray-200 text-center pt-3 bg-gray-100 h-16 w-full" href="/">👤 - Login</a>
+</nav>
 {% block content %}{% endblock %}
 
 </body>

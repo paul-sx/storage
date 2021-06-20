@@ -4,3 +4,4 @@ __pycache__
 *.pyc
 /static
 node_modules
+whoosh_index

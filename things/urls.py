@@ -1,9 +1,10 @@
 
-from django.urls import path
+from django.urls import path, include
 from things import views
 
 urlpatterns = [
     path('', views.LocationListView.as_view(), name='locations'),
+    path('search/', include('haystack.urls')),
     path('location/<int:pk>/', views.LocationDetailView.as_view(), name='location'),
     path('location/new/', views.LocationCreateView.as_view(), name='location_create'),
     path('location/<int:pk>/edit/', views.LocationUpdateView.as_view(), name='location_edit'),
