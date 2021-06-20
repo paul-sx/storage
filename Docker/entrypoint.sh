@@ -9,10 +9,12 @@ if [ ! -f manage.py ]; then
     git reset --hard origin/main
     python manage.py migrate --noinput
     python manage.py collectstatic --noinput
+    python manage.py rebuild_index --noinput
 else
     git pull
     python manage.py migrate --noinput
     python manage.py collectstatic --noinput
+    python manage.py rebuild_index --noinput
 fi
 
 exec "$@"
