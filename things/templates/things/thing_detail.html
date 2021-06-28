@@ -2,6 +2,7 @@
 
 {% block title_text %}{{thing}}{% endblock %}
 {% block edit_link %}{% url 'thing_edit' location.pk container.pk thing.pk %}{% endblock %}
+{% block new_link %}{% url 'thing_create' container.location.pk container.pk %}{% endblock %}
 
 {% block title_content %}<a href="/">🏠</a> > <a href="{% url 'location' location.pk %}">{{location}}</a> > <a href="{% url 'container' location.pk container.pk %}">{{container}}</a> > {{ thing }}{% endblock %}
 {% block content %}
